@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, Bestie! 💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #fff4f9 50%, #ffe8f5 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 40px 20px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(255, 105, 180, 0.2);
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1s ease-in;
+            width: 100%;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+            border-radius: 30px;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            animation: float 4s infinite ease-in-out;
+            opacity: 0.6;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+
+        .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .heart:nth-child(2) { left: 20%; animation-delay: 0.5s; }
+        .heart:nth-child(3) { left: 80%; animation-delay: 1s; }
+        .heart:nth-child(4) { left: 90%; animation-delay: 1.5s; }
+        .heart:nth-child(5) { left: 50%; animation-delay: 2s; }
+
+        h1 {
+            font-size: 2.5em; /* Responsive */
+            color: #ff69b4;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+        }
+
+        .emoji {
+            font-size: 3em; /* Responsive */
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .message {
+            font-size: 1.2em; /* Responsive */
+            color: #555;
+            line-height: 1.6;
+            margin: 30px 0;
+        }
+
+        .highlight {
+            color: #ff1493;
+            font-weight: bold;
+        }
+
+        .memories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive */
+            gap: 10px; /* Responsive */
+            margin: 40px 0;
+        }
+
+        .memory-box {
+            background: linear-gradient(135deg, #ffd6e8 0%, #ffe8f5 100%);
+            padding: 15px; /* Responsive */
+            border-radius: 15px;
+            font-size: 0.9em; /* Responsive */
+            color: #666;
+            transition: transform 0.3s ease;
+        }
+
+        .memory-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 1em; /* Responsive */
+            color: #888;
+            font-style: italic;
+        }
+
+        button {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            border: none;
+            padding: 12px 30px; /* Responsive */
+            font-size: 1.1em; /* Responsive */
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+            transition: transform 0.2s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px; /* Responsive */
+            height: 10px; /* Responsive */
+            background: #ff69b4;
+            position: absolute;
+            animation: confetti-fall 3s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .emoji {
+                font-size: 2.5em;
+            }
+
+            .message {
+                font-size: 1em;
+            }
+
+            .footer {
+                font-size: 0.9em;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hearts">
+            <span class="heart">💕</span>
+            <span class="heart">💖</span>
+            <span class="heart">💕</span>
+            <span class="heart">💖</span>
+            <span class="heart">💕</span>
+        </div>
+
+        <h1>Happy Valentine's Day!</h1>
+        
+        <div class="emoji">🌟✨💝✨🌟</div>
+
+        <div class="message">
+            To my <span class="highlight">amazing best friend</span>,
+
+
+            You're not just my best friend, you're my <span class="highlight">partner in crime</span>, 
+            my <span class="highlight">shoulder to cry on</span>, and my <span class="highlight">reason to smile</span> 
+            every single day!
+
+
+            Thank you for being the most incredible friend anyone could ask for. 
+            Our friendship is one of my greatest treasures! 💎
+        </div>
+
+        <div class="memories">
+            <div class="memory-box">
+                🎉
+Epic Adventures Together
+            </div>
+            <div class="memory-box">
+                😂
+Endless Laughter
+            </div>
+            <div class="memory-box">
+                🤗
+Always There
+            </div>
+            <div class="memory-box">
+                💪
+Supporting Each Other
+            </div>
+        </div>
+
+        <button onclick="showMessage()">Click for a Special Message! 💌</button>
+
+        <div class="footer">
+            You're the best friend anyone could ask for! 🌈
+
+            Love you always! 💕
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            const messageDiv = document.createElement('div');
+            messageDiv.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: white;
+                padding: 40px;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                z-index: 1000;
+                text-align: center;
+                max-width: 90%; /* Make it responsive */
+                animation: popIn 0.3s ease-out;
+            `;
+            
+            messageDiv.innerHTML = `
+                <div style="font-size: 3em; margin-bottom: 20px;">🎉✨</div>
+                <div style="font-size: 1.3em; color: #ff1493; line-height: 1.6; margin-bottom: 30px;">
+                    You're absolutely amazing and I'm so grateful for you! Here's to many more years of friendship, adventures, and making the best memories together! 💕✨
+                </div>
+                <button onclick="this.parentElement.remove(); document.getElementById('overlay').remove();" style="background: linear-gradient(135deg, #ff69b4, #ff1493); color: white; border: none; padding: 12px 30px; font-size: 1.1em; border-radius: 50px; cursor: pointer;">
+                    Close 💖
+                </button>
+            `;
+            
+            const overlay = document.createElement('div');
+            overlay.id = 'overlay';
+            overlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5);
+                z-index: 999;
+            `;
+            overlay.onclick = function() {
+                messageDiv.remove();
+                overlay.remove();
+            };
+            
+            document.body.appendChild(overlay);
+            document.body.appendChild(messageDiv);
+        }
+
+        // Create floating confetti
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.background = ['#ff69b4', '#ff1493', '#ffd6e8', '#ffe8f5'][Math.floor(Math.random() * 4)];
+            confetti.style.animationDelay = Math.random() * 3 + 's';
+            confetti.style.position = 'fixed';
+            confetti.style.top = '-10px';
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => confetti.remove(), 3000);
+        }
+
+        setInterval(createConfetti, 300);
+        
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes popIn {
+                from {
+                    transform: translate(-50%, -50%) scale(0.8);
+                    opacity: 0;
+                }
+                to {
+                    transform: translate(-50%, -50%) scale(1);
+                    opacity: 1;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
